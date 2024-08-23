@@ -1,0 +1,33 @@
+.text_20 {
+  color: var(--White, #fff);
+  font-family: "Work Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 26px */
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+.text_16 {
+  color: #000;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+}
+.section-title {
+  font-family: "Work Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  span {
+    color: var(--accent-color);
+    font-weight: 300;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 32px;
+  }
+}
