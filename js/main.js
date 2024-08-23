@@ -76,6 +76,55 @@ $(".eduSol-img-slider").slick({
   prevArrow: $(".eduSol").find(".prev"),
   nextArrow: $(".eduSol").find(".next"),
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".partner-vert-slider", {
+    direction: "vertical", // За замовчуванням вертикальний
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      1024: {
+        direction: "vertical", // Вертикальний слайдер для екранів ширше 1024px
+        slidesPerView: 3,
+      },
+      768: {
+        direction: "horizontal", // Горизонтальний для екранів від 768px до 1024px
+        slidesPerView: 3, // 3 слайди
+        spaceBetween: 20,
+      },
+      0: {
+        direction: "horizontal", // Горизонтальний для екранів до 768px
+        slidesPerView: 2, // 2 слайди
+        spaceBetween: 20,
+      },
+    },
+  });
+});
+
+$(document).ready(function () {
+  const filters = $(".filter-item");
+  const content = $(".content");
+
+  filters.on("click", function () {
+    const target = $(this).data("filter");
+
+    filters.removeClass("active");
+    $(this).addClass("active");
+
+    content.each(function () {
+      const content = $(this);
+      if (content.data("content") === target) {
+        content.addClass("active");
+      } else {
+        content.removeClass("active");
+      }
+    });
+  });
+});
+
 $(document).ready(function () {
   var $phoneInput = $("#tel");
   var $myForm = $("#myForm");
