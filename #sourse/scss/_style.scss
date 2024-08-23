@@ -392,7 +392,6 @@
     }
   }
 }
-
 .contact-us {
   .banner {
     height: 500px;
@@ -1000,6 +999,39 @@
     border: none;
     background-color: transparent;
   }
+  &.laser {
+    margin-bottom: 24px;
+    .photo-text-section {
+      border: none !important;
+    }
+    &.blue {
+      background-color: var(--accent-color);
+      .section-title {
+        color: #fff;
+        span {
+          color: #fff;
+        }
+      }
+      .photo-text-section {
+        .text-card {
+          .title {
+            color: #fff;
+            span {
+              color: #fff;
+            }
+          }
+          .text_16 {
+            color: #fff;
+          }
+        }
+      }
+      .techSpec {
+        .title {
+          color: #fff;
+        }
+      }
+    }
+  }
   @media screen and (max-width: 1024px) {
     padding: 24px 0;
   }
@@ -1188,6 +1220,10 @@
     padding: 12px;
     font-size: 16px;
     gap: 12px;
+    background-color: #fff;
+    &:nth-child(odd) {
+      background: #ededed;
+    }
     @media screen and (max-width: 768px) {
       font-size: 14px;
     }
