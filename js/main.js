@@ -70,7 +70,12 @@ $(".other-blog-slider").slick({
     },
   ],
 });
-
+$(".eduSol-img-slider").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: $(".eduSol").find(".prev"),
+  nextArrow: $(".eduSol").find(".next"),
+});
 $(document).ready(function () {
   var $phoneInput = $("#tel");
   var $myForm = $("#myForm");
